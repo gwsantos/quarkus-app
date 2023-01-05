@@ -1,5 +1,3 @@
-# OCP4-sample-pipeline-demo
-
 # quarkus-sample-pipeline Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
