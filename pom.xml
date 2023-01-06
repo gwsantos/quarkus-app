@@ -88,7 +88,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.redhat.rest.GreetingsResource</mainClass>
+              <mainClass>org.redhat.rest.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
