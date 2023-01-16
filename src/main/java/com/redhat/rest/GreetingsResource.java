@@ -7,11 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
-import io.quarkus.runtime.Startup;
-
 import javax.ws.rs.GET;
 
-@Startup
 @ApplicationScoped
 @Path("/hello")
 @Consumes(MediaType.TEXT_PLAIN)
