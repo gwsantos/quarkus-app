@@ -9,10 +9,10 @@ import javax.ws.rs.core.MediaType;
 
 import javax.ws.rs.GET;
 
-@ApplicationScoped
 @Path("/hello")
 @Consumes(MediaType.TEXT_PLAIN)
 @Produces(MediaType.TEXT_PLAIN)
+@ApplicationScoped
 public class GreetingsResource {
 
     @GET
