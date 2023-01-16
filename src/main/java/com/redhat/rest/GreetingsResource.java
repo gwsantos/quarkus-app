@@ -13,13 +13,12 @@ import javax.ws.rs.GET;
 public class GreetingsResource {
 
     @GET
-    @Path("/greetings")
     public String greet(){
         return "Hello from the application!";
     }
 
     @GET
-    @Path("/greetings/{name}")
+    @Path("/{name}")
     public String greetName(@PathParam("name") String name){
         return "Hi " + name + "! Welcome to the application!";
     }
