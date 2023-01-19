@@ -23,6 +23,6 @@ public class GreetingsResource {
     @GET
     @Path("/{name}")
     public String greetName(@PathParam("name") String name){
-        return "Hi " + name + "! Welcome to the application!";
+        return "Hi " + name + "! Welcome to application release 2.0!";
     }
 }
