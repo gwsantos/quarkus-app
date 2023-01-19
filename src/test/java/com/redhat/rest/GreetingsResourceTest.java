@@ -28,6 +28,6 @@ public class GreetingsResourceTest {
           .when().get("/hello/{name}")
           .then()
             .statusCode(200)
-            .body(is("Hi " + uuid + "! Welcome to the application!"));
+            .body(is("Hi " + uuid + "! Welcome to application release 2.0!"));
     }
 }
