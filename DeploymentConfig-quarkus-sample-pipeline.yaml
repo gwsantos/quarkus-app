@@ -1,0 +1,109 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    app.openshift.io/vcs-url: <<unknown>>
+    app.quarkus.io/build-timestamp: 2023-01-19 - 20:58:19 +0000
+    app.quarkus.io/commit-id: 1379cd51b27244df3a8ec04522eaf032cf67cc8c
+  creationTimestamp: "2023-01-19T20:47:49Z"
+  generation: 7
+  labels:
+    app.kubernetes.io/name: quarkus-sample-pipeline
+    app.kubernetes.io/version: 1.0-SNAPSHOT
+    app.openshift.io/runtime: quarkus
+  name: quarkus-sample-pipeline
+  namespace: quarkus-dev
+  resourceVersion: "72421"
+  uid: e459bdbc-d432-4d1b-8bee-90b03d1b522d
+spec:
+  replicas: 1
+  selector:
+    app.kubernetes.io/name: quarkus-sample-pipeline
+    app.kubernetes.io/version: 1.0-SNAPSHOT
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      annotations:
+        app.openshift.io/vcs-url: <<unknown>>
+        app.quarkus.io/build-timestamp: 2023-01-19 - 20:58:19 +0000
+        app.quarkus.io/commit-id: 1379cd51b27244df3a8ec04522eaf032cf67cc8c
+      creationTimestamp: "2023-01-19T20:47:49Z"
+      labels:
+        app.kubernetes.io/name: quarkus-sample-pipeline
+        app.kubernetes.io/version: 1.0-SNAPSHOT
+        app.openshift.io/runtime: quarkus
+    spec:
+      containers:
+      - env:
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: JAVA_APP_JAR
+          value: /deployments/quarkus-run.jar
+        image: image-registry.openshift-image-registry.svc:5000/quarkus-dev/quarkus-sample-pipeline@sha256:c8bd287c24dc59632f5c846b6bd712a1b64e9fb203c7e2954d396419a3d78671
+        imagePullPolicy: Always
+        name: quarkus-sample-pipeline
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - quarkus-sample-pipeline
+      from:
+        kind: ImageStreamTag
+        name: quarkus-sample-pipeline:1.0-SNAPSHOT
+        namespace: quarkus-dev
+      lastTriggeredImage: image-registry.openshift-image-registry.svc:5000/quarkus-dev/quarkus-sample-pipeline@sha256:c8bd287c24dc59632f5c846b6bd712a1b64e9fb203c7e2954d396419a3d78671
+    type: ImageChange
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2023-01-19T20:47:59Z"
+    lastUpdateTime: "2023-01-19T20:47:59Z"
+    message: Deployment config has minimum availability.
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-01-19T21:07:35Z"
+    lastUpdateTime: "2023-01-19T21:07:40Z"
+    message: replication controller "quarkus-sample-pipeline-4" successfully rolled
+      out
+    reason: NewReplicationControllerAvailable
+    status: "True"
+    type: Progressing
+  details:
+    causes:
+    - imageTrigger:
+        from:
+          kind: DockerImage
+          name: image-registry.openshift-image-registry.svc:5000/quarkus-dev/quarkus-sample-pipeline@sha256:c8bd287c24dc59632f5c846b6bd712a1b64e9fb203c7e2954d396419a3d78671
+      type: ImageChange
+    message: image change
+  latestVersion: 4
+  observedGeneration: 7
+  readyReplicas: 1
+  replicas: 1
+  unavailableReplicas: 0
+  updatedReplicas: 1
