@@ -16,6 +16,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.parameters>true</maven.compiler.parameters>
+        <sonar.buildString>-Dsonar.login=9adb18c5b2734abafda5774a09be5ae50bd84f32 -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=quarkustest -Dsonar.projectKey=quarkustest_quarkus-app</sonar.buildString>
     </properties>
 
     <dependencyManagement>
