@@ -18,6 +18,8 @@
         <maven.compiler.parameters>true</maven.compiler.parameters>
         <sonar.organization>quarkustest</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>9adb18c5b2734abafda5774a09be5ae50bd84f32</sonar.login>
+        <sonar.projectKey>quarkustest_quarkus-app</sonar.projectKey>
     </properties>
 
     <dependencyManagement>
