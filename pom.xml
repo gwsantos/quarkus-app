@@ -123,7 +123,7 @@
         </executions>
         <configuration>
             <serverId>nexus</serverId>
-            <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+            <nexusUrl>http://nexus.apps-crc.testing:8081/nexus/</nexusUrl>
             <skipStaging>true</skipStaging>
         </configuration>
       </plugin>
@@ -132,7 +132,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+      <url>http://nexus.apps-crc.testing:8081/nexus/content/repositories/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
   <profiles>
