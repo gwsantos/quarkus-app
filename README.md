@@ -1,4 +1,4 @@
-# quarkus-sample-pipeline Project
+# quarkus-app Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
