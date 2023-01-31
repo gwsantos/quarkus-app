@@ -71,7 +71,7 @@
                   <archive>
                     <manifest>
                     <!-- give full qualified name of your main class-->
-                      <mainClass>com.redhat.rest.Main</mainClass>
+                      <mainClass>org.acme.getting.started.GreetingService</mainClass>
                     </manifest>
                   </archive>
                 </configuration>
