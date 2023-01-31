@@ -67,6 +67,14 @@
                 <groupId>${quarkus.platform.group-id}</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.platform.version}</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+                    <!-- give full qualified name of your main class-->
+                      <mainClass>com.redhat.rest.Main</mainClass>
+                    </manifest>
+                  </archive>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
