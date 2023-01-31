@@ -1,2 +1,2 @@
 MAVEN_S2I_ARTIFACT_DIRS=target
-JAVA_APP_JAR=/target/quarkus-app.jar
+JAVA_APP_JAR=/deployments/quarkus-app.jar
