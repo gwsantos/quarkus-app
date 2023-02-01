@@ -99,7 +99,7 @@
                 <quarkus.package.type>native</quarkus.package.type>
             </properties>
             <build>
-                <finalName>${artifactId}</finalName>
+                <finalName>${project.artifactId}</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-failsafe-plugin</artifactId>
